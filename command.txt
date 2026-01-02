@@ -1,0 +1,6 @@
+git init [once before starting each project git]
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin http://github.com/nahin113/Web-Development-Journey.git
+git push -u origin main

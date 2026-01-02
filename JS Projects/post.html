@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Post</title>
+</head>
+<body>
+    <div id="post">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5KWa1mw32rInf1eC6V8Zt4rWvCkIOSkpfnQ&s">
+        <br>
+        <button style="border-radius: 20px;" >Like</button>
+        <button style="border-radius: 20px;" >Love</button>
+        <button style="border-radius: 20px;" >Care</button>
+        <button style="border-radius: 20px;" >Wow</button>
+    </div>
+
+    <div id="random-color-generate">
+        <br>
+        <h3 style="margin-left: 10px;">Click to generate a color</h3>
+        <br>
+        <button style="margin-left: 10px; margin-bottom: 20px; height:50px; width: 100px; border-radius: 8px;">Click Here</button>
+        <br>
+        <div style="width: 300px; border: 2px solid black; height: 200px;"></div>
+    </div>
+    <button style="margin: 50px; padding: 20px;" id="test">Test</button>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            let btn = document.querySelectorAll("button")
+
+        for (b of btn) {
+            if(b.innerText === "Like") b.onclick = ()=> alert("Photo liked") 
+            if(b.innerText === "Love") b.onclick = ()=> alert("Photo loved") 
+            if(b.innerText === "Care") b.onclick = ()=> alert("Photo Cared") 
+            if(b.innerText === "Wow") b.onclick = ()=> alert("Wow Reacted") 
+        }
+
+
+        let C_btn = document.querySelector("#random-color-generate button")
+
+        C_btn.addEventListener("click",()=> {
+            let header = document.querySelector("h3")
+
+            let color = RGB()
+
+            header.innerText = color
+
+            header.style.color = color
+
+            // header.nextElementSibling.nextElementSibling.style.backgroundColor = RGB()
+
+            let C_div = document.querySelector("#random-color-generate div")
+            C_div.style.backgroundColor = color
+        })
+
+
+        function RGB() {
+            let red = Math.floor(Math.random()*255)
+            let green = Math.floor(Math.random()*255)
+            let blue = Math.floor(Math.random()*255)
+
+            let random = `rgb(${red},${green},${blue})`
+            return random
+        }
+
+        
+        })
+    </script>
+</body>
+</html>

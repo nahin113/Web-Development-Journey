@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoint</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .responsive_div {
+            background-color: #738f0e;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) and (max-width:800px) {
+
+            .responsive_div {
+            background-color: #0b3f67;
+            width: 100%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive_div">
+        Hey, This is my breakpoint. I cant pass more than this or less than this
+    </div>
+</body>
+</html>

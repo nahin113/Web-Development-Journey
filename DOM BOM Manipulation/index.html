@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Demo</title>
+   
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: yellowgreen;
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        button {
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid;
+            background-color: #133d70;
+        }
+    </style>
+    
+</head>
+<body>
+        <h1>Javascript DOM Fun Examples</h1>
+        <div>
+            <h3>Accessing DOM Elements</h3>
+            <p id="CngTxt">This is a paragraph, Click the button to change me</p>
+            <button id="CngTxtBtn">Change Text</button>
+        </div>
+        <div>
+            <h3>Traversing The DOM</h3>
+            <ul style="padding: 10px;" id="cityList">
+                <li>Dhaka</li>
+                <li>Rangpur</li>
+                <li>Chittagong</li>
+                <li>Sylhet</li>
+            </ul>
+            <button style="margin-left: 10px;" id="citybtn">Highlight First City</button>
+        </div>
+        <div>
+            <h3>Manipulating DOM Elements</h3>
+            <div id="cfOorder" style="padding: 10px;">Order : <span id="cfType">Latte</span></div>
+            <button id="cngOrder">Change Order</button>
+        </div>
+        <div>
+            <h3>Add New Item in a list</h3>
+            <ul id="players">
+                <li>Cristiano Ronaldo</li>
+                <li>Lionel Messi</li>
+            </ul>
+            <button id="addG">Add Next Goat</button>
+        </div>
+        <div>
+            <h3>Remove a task from a list</h3>
+            <ul id="tasks" style="padding: 10px;">
+                <li>Class</li>
+                <li>Development</li>
+                <li>Competitive Programming</li>
+                <li>Academic</li>
+            </ul>
+            <button id="rmvtask" style="margin-left: 5px;">Remove</button>
+        </div>
+        <div>
+            <h3>Event handleing in DOM</h3>
+            <button id="clickMe">Click</button>
+        </div>
+        <div>
+            <h3>Event Delegation</h3>
+            <ul id="teaLst" style="padding: 10px;">
+                <li class="teaItm">Green Tea</li>
+                <li class="teaItm">Black Tea</li>
+                <li class="teaItm">Lemon Tea</li>
+            </ul>
+            <p>Click on any tea to select it</p>
+        </div>
+        <div>
+            <h3>Form Handling</h3>
+            <form id="feedbackForm">
+                <label for="feedbackInput">
+                    Your Feedback:
+                </label>
+                <input type="text" id="feedbackInput" placeholder="Enter Your Feedback">
+                <button style="padding:5px;" type="submit">Submit Feedback</button>
+            </form>
+            <p id="feedbackDisplay"></p>
+        </div>
+        <div>
+            <h3>DOM Content</h3>
+            <p id="DOMcontent">DOM content is loading . . . </p>
+        </div>
+        <div>
+            <h3>CSS class manipulation</h3>
+            <p id="Content">CHNAGE COLOR</p>
+            <button id="toggle">Toggle to Change Color</button>
+        </div>
+         <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css_File</title>
+    <style>
+        .B {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        .border {
+            margin: 20px;
+            border: 3px;
+            border-style: dashed;
+            border-radius: 10px;
+        }
+
+        .styled_text {
+            color: red;
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .box {
+            border: 2px solid red;
+            padding: 20px;
+            margin: 30px;
+            background-color: blue;
+            color: white;
+        }
+
+        .circle {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            border-radius: 100%;
+        }
+
+        .shadow-box {
+            background-color: green;
+            height: 200px;
+            width: 200px;
+            box-shadow: 10px 10px 15px grey;
+        }
+
+        .parent-container {
+            background-color: yellow;
+            height: 300px;
+            width: 350px;
+            position: relative;
+        }
+
+        .flex-container {
+            background-color: yellowgreen;
+            height: 400px;
+            width: 550px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+
+        .grid-item {
+            background-color: red;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-weight: 500;
+            color: aliceblue;
+            height: 100px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h3
+    style=" 
+    color: blue;
+    "
+    >This is a blue paragraph</h3>
+    </div>
+
+    <div>
+        <button class="B">Click Me</button>
+    </div>
+
+    <div class="border">
+        <h1>dashed border with rounded corners</h1>
+    </div>
+
+    <div>
+        <p class="styled_text">
+            This is a styled paragraph of text
+        </p>
+    </div>
+    
+    <div class="box">
+        <h4>
+            This box has padding and margin applied
+        </h4>
+    </div>
+
+    <div class="circle"></div>
+
+    <br>
+    <div class="shadow-box"></div>
+    <br>
+
+    <div class="parent-container">
+        <div
+        style=" 
+        position: static;
+        background-color: violet;
+        height: 100px;
+        width: 100px;
+        ">static</div>
+
+        <div
+        style="
+        position: relative;
+        background-color: red;
+        top: 50px;
+        left: 50px;
+        height: 100px;
+        width: 100px;
+        ">relative</div>
+
+        <div
+        style=" 
+        background-color: blue;
+        top: 30px;
+        left: 30px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+         ">absolute</div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div style="
+        background-color: red;
+            height: 100px;
+            width: 100px;
+            ">1</div>
+        <div style="
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        ">2</div>
+        <div style="
+        background-color: red;
+        height: 100px;
+        width: 100px;
+        ">3</div>
+    </div>
+
+    <br>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+</body>
+</html>

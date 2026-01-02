@@ -1,0 +1,76 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .test{
+            margin: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2></h2>
+        <input type="text" placeholder="Enter your name">
+    </div>
+
+    <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        let inp = document.querySelector("input")
+        inp.addEventListener("input",(e)=> {
+            if(e.data >= "A" && e.data<= "Z" || e.data>= 'a' && e.data<='z' || e.data === " ")
+            {
+                document.querySelector("h2").innerText = inp.value
+            }
+        })
+});
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="timer">Time: 60s</p>
+<button id="start">Start</button>
+
+<script>
+let timeLeft = 60;
+let timer = null;
+
+document.getElementById("start").addEventListener("click", startTimer);
+
+function startTimer() {
+    if (timer !== null) return; // Prevent starting twice
+
+    timer = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").innerText = `Time: ${timeLeft}s`;
+
+        if (timeLeft <= 0) {
+            stopTimer();
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timer);
+    timer = null;
+    document.getElementById("timer").innerText = "Time: 0s";
+}
+</script>
+
+</body>
+</html>

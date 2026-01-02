@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe_Mart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    
+    <style>
+
+      .body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(2,400px);
+            gap: 10px;
+            padding: 30px;
+            align-items: start;
+        }
+
+        .card {
+          position: relative;
+          width: 100%;
+          min-height: 350px;
+        }
+
+       .card-body {
+        position: relative;
+        padding-bottom: 3rem;  /* space for button when it appears */
+        display: flex;
+        flex-direction: column;
+        }
+
+        .card-img-top {
+    height: 200px;       /* or any fixed value */
+    object-fit:contain;   /* crop instead of distort */
+    width: 100%;
+  }
+
+.card .btn {
+    position: absolute;
+    width: 80%;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+.card:hover .btn {
+    opacity: 1;
+    bottom: 2px;         /* small upward slide */
+    pointer-events: auto;
+}
+.bata-img {
+  padding: 10px 10px 10px 0px;
+}
+
+@media (max-width : 1070px) {
+  .card-container {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+@media (max-width : 820px) {
+  .card-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width : 570px) {
+  .card-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md" data-bs-theme="light"
+    style="background-color: #b1ccdf">
+    <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <img class="bata-img" src="https://www.batabd.com/cdn/shop/files/logo-2_d42c63ce-1f56-4af2-a68f-a4cc3a91bd07.png?v=1614332440" alt="Apex image">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 d-flex justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active form-control me-5" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active form-control me-5" href="#">Catagory</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active form-control me-5" href="#">Men</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active form-control me-5" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active form-control me-5">About Us</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-light" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<header>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="3000">
+      <img src="https://www.batabd.com/cdn/shop/files/Men_s-casuals-web-banner.jpg?v=1740655602" class="d-block w-100 img-fluid" alt="men_shoes_img">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://www.batabd.com/cdn/shop/files/B-R-L-web-banner.jpg?v=1741154413" class="d-block w-100 img-fluid" alt="Red_lavel_img">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://www.batabd.com/cdn/shop/files/online-exclusive2.jpg?v=1733808160" class="d-block w-100 img-fluid" alt="north_star_img">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://www.batabd.com/cdn/shop/files/FF-web-banner-4.jpg?v=1758823292" class="d-block w-100 img-fluid" alt="Discount_img">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="https://www.batabd.com/cdn/shop/files/ballerina-web-banner.jpg?v=1755082566" class="d-block w-100 img-fluid" alt="victoria_img">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</header>
+<br>
+<main class="card-container">
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/1_708d5c1a-8430-4702-b87a-289aee593c6a_300x.jpg?v=1756580281" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">WEINBRENNER</h5>
+    <p class="card-text">Weinbrenner Sandal For Men</p>
+    <p class="card-text">Tk 1,274.00</p>
+    <a href="#" class="btn btn-dark">Shop Now</a>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/8899032_700X650_2_300x.jpg?v=1756580437" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">NORTH STAR</h5>
+    <p class="card-text">North Star Canvas Shoe</p>
+    <p class="card-text">Tk 674.00</p>
+    <a href="#" class="btn btn-dark">Shop Now</a>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/1_fcd15fe6-75e0-4061-9f29-37deedef0621_300x.jpg?v=1756578935" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BATA</h5>
+    <p class="card-text">Sandak Miami Slides</p>
+    <p class="card-text">Tk 299.00</p>
+    <a href="#" class="btn btn-dark">Shop now</a>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/1_f07a97b4-a2fd-4207-b90a-50c665f4f14b_300x.jpg?v=1756579693" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BATA</h5>
+    <p class="card-text">Men's Casual GLOBE Sneaker</p>
+    <p class="card-text">Tk 2,624.00</p>
+    <a href="#" class="btn btn-dark">Shop Now</a>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/1_258618b4-134b-4214-9448-12784d4ff47f_300x.jpg?v=1756579842" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BATA</h5>
+    <p class="card-text">Women's SHAKIRA Ballerina Flat</p>
+    <p class="card-text">Tk 337.00</p>
+    <a href="#" class="btn btn-dark">Shop Now</a>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="card-item">
+        <div class="card" style="width: 100%;">
+  <img src="https://www.batabd.com/cdn/shop/products/DSC_3400_130b85aa-b9f3-45bb-8c66-d0b94ce47de4_300x.jpg?v=1756580052" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">BUBBLEGUMMERS</h5>
+    <p class="card-text">Bubble Gummers Slip-On Shoe</p>
+    <p class="card-text">Tk 1,499.00</p>
+    <a href="#" class="btn btn-dark">Shop Now</a>
+  </div>
+</div>
+    </div>
+    </div>
+
+</main>
+
+<br>
+<footer style="font-style:italic;
+display: flex;
+justify-content: center;
+align-itemdark">
+  <h3>&copy;bata</h3>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+</body>
+</html>

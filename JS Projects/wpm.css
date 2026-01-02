@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+input {
+    margin: 50px;
+    width: 22%;
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.highlight {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.correct {
+  color: #4CAF50;
+}
+
+.wrong {
+  color: #E53935;
+}
+
+.active {
+  background: grey;
+}

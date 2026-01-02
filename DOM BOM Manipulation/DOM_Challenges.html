@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Challenges</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            height: 100%vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .img-btn {
+            margin-top: 10px;
+            display: flex;;
+            justify-content: space-around;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        button {
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid;
+            background-color: #133d70;
+        }
+
+        button:hover {
+            font-size: medium; 
+            transition: 0.25s ease-in;
+        }
+        img {
+            height: 300px;
+            width: 200px;
+            border: 2px solid;
+            padding: 10px;
+        }
+
+        input {
+            padding: 2px 5px 2px 5px;
+            border-radius: 5px;
+            border: 2px solid rgb(56, 56, 210);
+        }
+
+        .dark { background: #121212; color: white; }
+
+        .light { background: white; color: black; }
+
+    </style>
+</head>
+<body>
+    <div>
+        <button style="position: absolute; display: flex;" id="toggleTheme">Dark</button>
+    </div>
+    <div>
+        <h3>Image Traverse</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg" id="img">
+        <div class="img-btn">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <div>
+        <p id="cnt">Click : <span id="num"></span> times</p>
+        <button id="clickCnt">Click</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+        Your Feedback : 
+        <input type="text" name="" id="feedback" placeholder="Provide Your Feedback">
+        <p style="margin: 0; padding: 20; font-size: smaller; margin-left: 130px;">You have given a <span id="number"></span> character input</p>
+    </div>
+
+    <div style="border: 2px solid; padding: 20px; margin-top: 15px; border-radius: 15px;">
+        <h3>Dynamic TO-DO List</h3>
+        <label for="task"> Enter your Task : </label>
+        <input type="text" name="" id="task" placeholder="Task">
+        <h2>Task List : </h2>
+        <ul id="taskList" style="list-style: none;">
+            <li>Competitive Programming</li>
+        </ul>
+        <div class="img-btn">
+            <button id="rmv">Remove</button>
+            <button id="add">Add</button>
+        </div>
+    </div>
+    <div>
+        <h3>Real Web Password</h3>
+        <label for="Password"> Password : </label>
+        <input type="password" name="" id="pass">
+        <input type="checkbox" id="inpType">
+    </div>
+    <script src="./DOMscript.js"></script>
+</body>
+</html>

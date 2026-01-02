@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do_List</title>
+    <style>
+       body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #183654;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+    background-color: #1f5081;
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+
+    
+
+    .card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    h1,h3 {
+        text-align: center;
+    }
+
+        li {
+    background-color: #183654;
+    padding: 10px; /* Match input padding */
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px; /* Space between tasks */
+    box-sizing: border-box;
+    list-style: none; /* Moves the bullet point logic to CSS */
+    }
+
+    
+    button {
+    width: 50%; /* Changed from 50% for perfect alignment */
+    cursor: pointer;
+    background-color: #fff;
+    color: #1f5081;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    padding: 10px;
+    margin: auto;
+    }
+
+    input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid white;
+    width: 100%; /* Stretch to match the card width */
+    box-sizing: border-box; 
+    /* Ensures padding doesn't increase width */
+}
+
+    ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    }  
+    
+
+    </style>
+</head>
+<body>
+    <div class = "card">
+        <h1>To Do List</h1>
+        <input type="text" name="task" id="task" placeholder="Add a task">
+        <button>Add Task</button>
+        <h3>Tasks List</h3>
+        <ul></ul>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+
+
+           let btn = document.querySelector("button")
+
+           btn.addEventListener("click",()=> {
+
+            let inp = document.querySelector("input").value.trim()
+
+            if(inp == "") alert("Task cant be empty")
+            else
+            {
+                let li = document.createElement("li")
+                li.innerText = inp
+                li.style.listStyle = "none"
+                li.style.display = "flex"
+                li.style.justifyContent = "space-between"
+                li.style.alignItems = "center"
+
+
+                let dlt = document.createElement("button")
+                dlt.innerText = "Delete"
+                dlt.classList.add("delete")
+
+        // dlt.addEventListener("click",()=> {
+        //         li.remove()
+        //     })
+
+                li.appendChild(dlt)
+
+                document.querySelector("div ul").append(li)
+                document.querySelector("input").value = ""
+            }
+
+           })
+
+           let items = document.querySelector("ul")
+
+           items.addEventListener("click",(e)=> {
+                if(e.target.nodeName === "BUTTON")
+                {
+                    e.target.parentElement.remove()
+                }
+           })
+
+
+           
+        })
+    </script>
+</body>
+</html>

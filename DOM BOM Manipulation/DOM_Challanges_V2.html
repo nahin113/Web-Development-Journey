@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-World DOM Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    h2 {
+      color: yellowgreen;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+    }
+    input, button {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+      margin-top: 10px;
+    }
+    button {
+      background-color: #133d70;
+      color: white;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: #333;
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #nameList li {
+        display: none;
+    }
+
+    .dark {
+        background-color: #1a1a1a;
+        color: #fff;
+    }
+
+    .light {
+        background-color: #fff;
+        color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1️⃣ Search Filter -->
+  <section>
+    <h2>1. Search Filter List</h2>
+    <input type="text" id="searchBox" placeholder="Search name...">
+    <ul id="nameList">
+      <li>John</li>
+      <li>Jane</li>
+      <li>Jonas</li>
+      <li>Jenny</li>
+      <li>Michael</li>
+      <li>Sara</li>
+      <li>Tom</li>
+    </ul>
+  </section>
+
+  <!-- 2️⃣ Real-Time Clock -->
+  <section>
+    <h2>2. Real-Time Digital Clock</h2>
+    <h1 id="clock">00:00:00</h1>
+  </section>
+
+  <!-- 3️⃣ FAQ Accordion -->
+  <section>
+    <h2>3. Expandable FAQ Section</h2>
+    <div class="faq">
+      <h3 id="question1">What is DOM?</h3>
+      <p id="answer1" style="display:none;">DOM means Document Object Model. It represents the structure of your webpage.</p>
+
+      <h3 id="question2">What is Event Listener?</h3>
+      <p id="answer2" style="display:none;">It listens for user actions (like clicks or typing) and runs JavaScript code.</p>
+
+      <h3 id="question3">What is LocalStorage?</h3>
+      <p id="answer3" style="display:none;">A way to save data in the browser even after reloading.</p>
+    </div>
+  </section>
+
+  <!-- 4️⃣ Random Quote Generator -->
+  <section>
+    <h2>4. Random Quote Generator</h2>
+    <p id="quote">Click below for a random quote!</p>
+    <button id="newQuote">New Quote</button>
+  </section>
+
+  <!-- 5️⃣ Theme Switcher with Save -->
+  <section>
+    <h2>5. Theme Switcher with Save</h2>
+    <button id="toggleTheme">Toggle Theme</button>
+  </section>
+  <script src="./DOMscriptV2.js"></script>
+</body>
+</html>
