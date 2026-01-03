@@ -1,5 +1,29 @@
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./Images/peakpx.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+* {
+  font-weight: 500;
+}
+
+h1 {
+  text-align: center;
+}
+
+#restart {
+  display: block;
+  margin: auto;
+  border-top: 2x solid black;
+  border-bottom: 2px solid black;
+  border-left: none;
+  border-right: none;
+  padding: 20px 0px;
+  width: 100%;
+  font-size: larger;
+  background-color: #F0FFFF;
 }
 
 p {
@@ -12,7 +36,6 @@ input {
     margin: 50px;
     width: 22%;
     border: 2px solid;
-    border-radius: 8px;
     padding: 8px;
     font-size: 1rem;
     letter-spacing: 2px;
@@ -44,4 +67,123 @@ input {
 
 .active {
   background: grey;
+} */
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* PAGE */
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* TITLE */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #f8fafc;
+}
+
+/* INFO BAR */
+#info {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+#info p {
+  font-size: 1.1rem;
+  color: #cbd5f5;
+}
+
+/* TEXT AREA */
+#text {
+  max-width: 800px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* INPUT */
+input {
+  width: 320px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #475569;
+  background: #020617;
+  color: #e5e7eb;
+  outline: none;
+}
+
+input:focus {
+  border-color: #38bdf8;
+}
+
+/* RESTART BUTTON */
+#restart {
+  margin-top: 30px;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  color: #38bdf8;
+  background: transparent;
+  border: none;
+  border-top: 2px solid #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#restart:hover {
+  color: #f8fafc;
+  border-color: #f8fafc;
+}
+
+/* STATES */
+.correct {
+  color: #22c55e;
+}
+
+.wrong {
+  color: #ef4444;
+}
+
+.active {
+  background: rgba(56, 189, 248, 0.25);
+  border-radius: 3px;
+}
+
+/* VISIBILITY */
+.hidden {
+  opacity: 0;
+}
+
+/* RESULTS CENTERING */
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.highlight {
+  font-size: 2.4rem;
+  color: #f8fafc;
 }
