@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded",()=> {
     let wpm = document.querySelector("#wpm")
     let accuracy = document.querySelector("#accuracy")
     let correctChars = 0;
+    let totalTypedChars = 0
     
 
     inp.addEventListener("input", (e) => {
@@ -43,8 +44,8 @@ document.addEventListener("DOMContentLoaded",()=> {
 
         inp.classList.add("hidden")
 
-        
-
+        totalTypedChars = inp.value.length
+        correctChars = 0
 
         if(typed.length >= 1 && !startTime)
         {
@@ -60,7 +61,6 @@ document.addEventListener("DOMContentLoaded",()=> {
         // console.log(spans)
         // console.log(paragraph)
 
-        correctChars = 0;
 
            for(let i=0;i<spans.length;i++)
            {
@@ -85,7 +85,19 @@ document.addEventListener("DOMContentLoaded",()=> {
            
     });
 
+    document.querySelector("$restart").addEventListener("click",restartTest)
+
+    function restartTest( {
+      
+    })
+
     function updateStats() {
+      let acc = 100
+      if(totalTypedChars > 0)
+      {
+         acc = Math.round((correctChars/totalTypedChars)*100)
+      }
+      accuracy.innerText = `Accuracy: ${acc}%`;
       if (cnt == 0) 
       {
         clearInterval(timerInterval)
@@ -96,6 +108,7 @@ document.addEventListener("DOMContentLoaded",()=> {
         const wordsTyped = Math.floor(correctChars / 5);
         wpm.innerText = `Words Per Minute: ${wordsTyped}`;
         time.innerText = `Time: ${cnt}s`;
+        
         paragraph.classList.add("hidden")
         document.querySelector("#info").classList.add("middle")
         document.querySelectorAll("div p").classList.add("highlight")
