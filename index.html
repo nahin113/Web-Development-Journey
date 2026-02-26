@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects of JS</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #001F3F, #003366, #004080);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #E0E8FF;
+      margin-top: 60px;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 30px;
+      width: 250px;
+      text-align: center;
+      color: #E6E9FF;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #AFCBFF;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #C7D7FF;
+    }
+
+    @media (max-width: 768px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Projects of JS</h1>
+  <div class="card-container">
+    <a href="./To-Do_List.html" class="card">
+      <h2>To-Do List</h2>
+      <p>Organize your daily tasks efficiently with this interactive To-Do List app. Add, mark as complete, and delete tasks to stay productive throughout the day.</p>
+    </a>
+
+    <a href="./Weather_app.html" class="card">
+      <h2>Live Weather</h2>
+      <p>Check real-time weather updates of any city with this live weather app. It fetches accurate temperature, humidity, and condition data using an external API.</p>
+    </a>
+
+    <a href="./E-commerce.html" class="card">
+      <h2>Simple E-Commerce</h2>
+      <p>Explore a basic e-commerce layout built with JavaScript. Browse products, add them to your cart, and view your total instantly with dynamic updates</p>
+    </a>
+
+    <a href="./Quiz.html" class="card">
+    <h2>Quiz App</h2>
+    <p>Test your knowledge with this fun quiz app. Choose answers from multiple options, get instant feedback, and see your final score at the end of the quiz.</p>
+  </a>
+
+  <a href="./Expense_tracker.html" class="card">
+    <h2>Expense Tracker</h2>
+    <p>Keep track of your spending habits with this expense tracker. Add and remove expenses to monitor your budget and stay in control of your finances.</p>
+  </a>
+  </div>
+</body>
+</html>
